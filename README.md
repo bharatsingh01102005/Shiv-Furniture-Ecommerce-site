@@ -134,11 +134,12 @@ Shiv-Furniture-House/
 | `SHOP_PINCODE` | Your shop's PIN code (for delivery calc) |
 
 ### Client (`client/.env`)
-| Variable | Description |
-|---|---|
-| `VITE_API_BASE` | Backend URL |
-| `VITE_UPI_ID` | UPI ID shown in checkout |
-| `VITE_GOOGLE_CLIENT_ID` | Google OAuth client ID |
+| Variable | Description | Example |
+|---|---|---|
+| `VITE_API_BASE` | Backend URL | `https://<your-backend>.onrender.com` |
+| `VITE_UPI_ID` | UPI ID shown in checkout | `bharatsingh1102005-1@oksbi` |
+| `VITE_MERCHANT_NAME` | Merchant name shown in UPI flow | `Shiv%20Furniture%20House` |
+| `VITE_GOOGLE_CLIENT_ID` | Google OAuth client ID | `647114645098-0b5bi5shosk8vcedeom6jo9s0d9l8v9g.apps.googleusercontent.com` |
 
 ---
 
@@ -149,27 +150,30 @@ Shiv-Furniture-House/
 2. Root directory: `client`
 3. Build command: `npm install && npm run build`
 4. Output directory: `dist`
-5. Set env vars in Vercel:
-   - `VITE_API_BASE`
-   - `VITE_UPI_ID`
-   - `VITE_GOOGLE_CLIENT_ID`
+5. Add these environment variables in Vercel:
+   - `VITE_API_BASE = https://<your-backend>.onrender.com`
+   - `VITE_UPI_ID = bharatsingh1102005-1@oksbi`
+   - `VITE_MERCHANT_NAME = Shiv%20Furniture%20House`
+   - `VITE_GOOGLE_CLIENT_ID = 647114645098-0b5bi5shosk8vcedeom6jo9s0d9l8v9g.apps.googleusercontent.com`
 
 ### Backend – Render
 1. Connect the GitHub repo to Render.
 2. Create a Web Service with root directory `server`.
 3. Build command: `npm install`
 4. Start command: `npm start`
-5. Set env vars in Render:
-   - `PORT`
-   - `MONGO_URI`
-   - `JWT_SECRET`
-   - `GOOGLE_CLIENT_ID`
-   - `SMTP_HOST`
-   - `SMTP_PORT`
-   - `SMTP_USER`
-   - `SMTP_PASS`
-   - `SMTP_FROM`
-   - `BRAND_NAME`, `UPI_ID`, `MERCHANT_NAME` (optional)
+5. Add these environment variables in Render:
+   - `PORT = 3000`
+   - `MONGO_URI = mongodb+srv://<user>:<password>@cluster0.6s72byx.mongodb.net/<dbname>?retryWrites=true&w=majority`
+   - `JWT_SECRET = a-strong-secret-string`
+   - `GOOGLE_CLIENT_ID = 647114645098-0b5bi5shosk8vcedeom6jo9s0d9l8v9g.apps.googleusercontent.com`
+   - `SMTP_HOST = smtp.gmail.com`
+   - `SMTP_PORT = 587`
+   - `SMTP_USER = your-email@gmail.com`
+   - `SMTP_PASS = your-gmail-app-password`
+   - `SMTP_FROM = Shiv Furniture <your-email@gmail.com>`
+   - `BRAND_NAME = Shiv Furniture House` (optional)
+   - `UPI_ID = bharatsingh2005@oksbi` (optional)
+   - `MERCHANT_NAME = Shiv%20Furniture%20House` (optional)
 
 ## 📄 License
 
