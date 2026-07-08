@@ -142,6 +142,35 @@ Shiv-Furniture-House/
 
 ---
 
+## ☁️ Deployment
+
+### Frontend – Vercel
+1. Connect the GitHub repo to Vercel.
+2. Root directory: `client`
+3. Build command: `npm install && npm run build`
+4. Output directory: `dist`
+5. Set env vars in Vercel:
+   - `VITE_API_BASE`
+   - `VITE_UPI_ID`
+   - `VITE_GOOGLE_CLIENT_ID`
+
+### Backend – Render
+1. Connect the GitHub repo to Render.
+2. Create a Web Service with root directory `server`.
+3. Build command: `npm install`
+4. Start command: `npm start`
+5. Set env vars in Render:
+   - `PORT`
+   - `MONGO_URI`
+   - `JWT_SECRET`
+   - `GOOGLE_CLIENT_ID`
+   - `SMTP_HOST`
+   - `SMTP_PORT`
+   - `SMTP_USER`
+   - `SMTP_PASS`
+   - `SMTP_FROM`
+   - `BRAND_NAME`, `UPI_ID`, `MERCHANT_NAME` (optional)
+
 ## 📄 License
 
 MIT — free to use and modify.

@@ -1,0 +1,11 @@
+services:
+  - type: web_service
+    name: shiv-furniture-backend
+    env: node
+    plan: starter
+    region: oregon
+    branch: main
+    autoDeploy: true
+    buildCommand: npm install
+    startCommand: npm start
+    root: server
