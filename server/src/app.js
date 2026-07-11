@@ -15,7 +15,7 @@ applySecurity(app);
 app.use(express.json({ limit: "250kb" }));
 
 // Health check route
-app.get("api/health", (req, res) => res.json({ ok: true, message: "Server is running" }));
+app.get("/api/health", (req, res) => res.json({ ok: true, message: "Server is running" }));
 
 // API routes
 app.use("/api/auth", authRoutes);
