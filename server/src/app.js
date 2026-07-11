@@ -18,10 +18,10 @@ app.use(express.json({ limit: "250kb" }));
 app.get("api/health", (req, res) => res.json({ ok: true, message: "Server is running" }));
 
 // API routes
-app.use("api/auth", authRoutes);
-app.use("api/products", productsRoutes);
-app.use("api/orders", ordersRoutes);
-app.use("api/settings", settingsRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/products", productsRoutes);
+app.use("/api/orders", ordersRoutes);
+app.use("/api/settings", settingsRoutes);
 
 // Handle unknown routes
 app.all("*", (req, res, next) => {
